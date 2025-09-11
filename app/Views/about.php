@@ -3,34 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Web System</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="css\bootstrap.min.css">
 </head>
 <body>
-    <div class="container mt-4">
-        <nav class="navbar navbar-expand-lg navbar-light bg-primary rounded mb-4">
-            <div class="container-fluid">
-                <a class="navbar-brand text-white" href="<?= base_url() ?>">Web System</a>
-                <div class="navbar-nav">
-                    <a class="nav-link text-white" href="<?= base_url() ?>">Home</a>
-                    <a class="nav-link active text-white bg-secondary rounded" href="<?= base_url('about') ?>">About</a>
-                    <a class="nav-link text-white" href="<?= base_url('contact') ?>">Contact</a>
-                </div>
-            </div>
-        </nav>
-        
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card border-primary">
-                    <div class="card-body bg-light">
-                        <h1 class="card-title text-primary">About Page</h1>
-                        <p class="card-text">Welcome to the About page of my Web System!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+   <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="http://localhost/WebSystem-ITE311/ITE311-ALCAYDE/">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact">Contact</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Options
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Report</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Logout</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Admin</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
     </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </div>
+</nav>
+    <div #id="kij" style="text-align: center; margin-top: 20px;">
+    <h1>This is My About page</h1>
+    </div>
+    <script src="js\bootstrap.bundle.min.js"></script>
 </body>
 </html>

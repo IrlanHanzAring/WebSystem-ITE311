@@ -34,5 +34,6 @@ $routes->get('/dashboard', 'Auth::dashboard');
 /**
  * for midterm xam
  */
+ /**task 1 */
 $routes->get('/announcements', 'Announcdement::index');
 $routes->setAutoRoute(true);

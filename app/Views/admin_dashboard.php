@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-<!--midterm-->
+    
 </body>
 </html>

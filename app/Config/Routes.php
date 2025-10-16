@@ -32,7 +32,7 @@ $routes->get('/logout', 'Auth::logout');
 $routes->get('/dashboard', 'Auth::dashboard');
 
 /**
- * midterm
+ * for midterm xam
  */
 $routes->get('/announcements', 'Announcdement::index');
 $routes->setAutoRoute(true);

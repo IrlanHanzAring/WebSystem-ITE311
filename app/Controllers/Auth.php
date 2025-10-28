@@ -1,5 +1,4 @@
 <?php
-<<<<<<< HEAD
 
 namespace App\Controllers;
 
@@ -76,29 +75,6 @@ class Auth extends BaseController
         }
     }
 
-    public function logout()
-    {
-        session()->destroy();
-        return redirect()->to('/login');
-    }
-    public function dashboard()
-    {
-        if (! session()->get('isLoggedIn')) {
-            return redirect()->to('/login')->with('error', 'You must log in first.');
-        }
-
-        return view('dashboard');
-=======
-namespace App\Controllers;
-
-use CodeIgniter\Controller;
-use Config\Database;
-
-class Auth extends Controller
-{
-    /**
-     * Show registration form and handle new user creation
-     */
     public function register()
     {
         helper('form');
@@ -113,7 +89,7 @@ class Auth extends Controller
             ];
 
             if ($this->validate($validationRules)) {
-                $db = Database::connect();
+                $db = \Config\Database::connect();
                 $builder = $db->table('users');
 
                 $userRecord = [
@@ -157,7 +133,7 @@ class Auth extends Controller
                 $email    = $this->request->getPost('email');
                 $password = $this->request->getPost('password');
 
-                $db = Database::connect();
+                $db = \Config\Database::connect();
                 $user = $db->table('users')->where('email', $email)->get()->getRow();
 
                 if ($user && password_verify($password, $user->password)) {
@@ -202,6 +178,5 @@ class Auth extends Controller
     {
         session()->destroy();
         return redirect()->to(site_url('login'));
->>>>>>> 8450d6c (Added unique dashboards for it's roles)
     }
 }

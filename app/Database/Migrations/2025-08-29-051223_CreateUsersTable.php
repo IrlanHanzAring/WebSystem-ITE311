@@ -15,11 +15,7 @@ class CreateUsersTable extends Migration
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
-<<<<<<< HEAD
-            'username' => [
-=======
             'name' => [
->>>>>>> 8450d6c (Added unique dashboards for it's roles)
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
             ],
@@ -33,13 +29,8 @@ class CreateUsersTable extends Migration
             ],
             'role' => [
                 'type'       => 'ENUM',
-<<<<<<< HEAD
-                'constraint' => ['admin', 'user'],
-                'default'    => 'user',
-=======
                 'constraint' => ['admin', 'teacher', 'student'],
                 'default'    => 'student',
->>>>>>> 8450d6c (Added unique dashboards for it's roles)
             ],
             'created_at' => [
                 'type' => 'DATETIME',

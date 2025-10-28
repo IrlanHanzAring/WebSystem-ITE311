@@ -15,7 +15,7 @@ $routes->get('/contact', 'Home::contact');
 /**
  *Lab 4 ni sya dre
  */
-<<<<<<< HEAD
+
 $routes->get('/register', 'Auth::new');
 $routes->get('/login', 'Auth::index');
 $routes->post('/login/auth', 'Auth::auth');
@@ -23,13 +23,17 @@ $routes->get('/logout', 'Auth::logout');
 $routes->get('/dashboard', 'Auth::dashboard');
 $routes->post('/register', 'Auth::create');
 $routes->get('/register/success', 'Auth::success');
-=======
+
 $routes->get('/register', 'Auth::register');
 $routes->post('/register', 'Auth::register');
 $routes->get('/login', 'Auth::login');
 $routes->post('/login', 'Auth::login');
 $routes->get('/logout', 'Auth::logout');
 $routes->get('/dashboard', 'Auth::dashboard');
->>>>>>> 8450d6c (Added unique dashboards for it's roles)
 
+/**
+ * for midterm xam
+ */
+ /**task 1 */
+$routes->get('/announcements', 'Announcement::index');
 $routes->setAutoRoute(true);
